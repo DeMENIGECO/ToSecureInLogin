@@ -1,6 +1,6 @@
 # 🔐 ToSecureInLogin
 
-**Ultima versione:** `1.0`  
+**Ultima versione:** `1.1`  
 **Sigla:** _TSIL_
 
 ---
