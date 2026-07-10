@@ -1,0 +1,84 @@
+<!DOCTYPE html>    
+<html lang="it">    
+<head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Login</title>    
+    
+<style>    
+body {    
+  margin: 0;    
+  font-family: Arial;    
+  background: linear-gradient(135deg, #a8e063, #56ab2f);    
+  display: flex;    
+  justify-content: center;    
+  align-items: center;    
+  height: 100vh;    
+}    
+    
+.box {    
+  background: white;    
+  padding: 25px;    
+  border-radius: 15px;    
+  width: 90%;    
+  max-width: 300px;    
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);    
+}    
+    
+input, button {    
+  width: 100%;    
+  padding: 10px;    
+  margin-top: 10px;    
+  border-radius: 8px;    
+  border: 1px solid #ccc;    
+}    
+    
+button {    
+  background: #56ab2f;    
+  color: white;    
+  border: none;    
+  cursor: pointer;    
+}    
+</style>    
+</head>    
+    
+<body>    
+    
+<div class="box">    
+  <h2>Login</h2>    
+  <input type="number" id="usercode" placeholder="Codice utente">    
+  <input type="password" id="password" placeholder="Password">    
+  <button onclick="login()">Accedi</button>    
+  <p>Powered by <b><a href="https://github.com/DeMENIGECO/ToSecureInLogin/tree/main/README.md">ToSecureInLogin</a></b></p>    
+</div>    
+    
+<script>    
+async function login() {    
+  const code = document.getElementById("usercode").value;    
+  const pass = document.getElementById("password").value;    
+    
+  const res = await fetch("users.json");    
+  const users = await res.json();    
+    
+  const user = users.find(u =>     
+    u.usercode == code && u.userpassword == pass    
+  );    
+    
+  if(user) {    
+    // genera token casuale    
+    const token = Math.floor(Math.random() * 999999);    
+    
+    // salva token usato    
+    localStorage.setItem("token_" + token, "used");    
+    
+    // redirect    
+    window.location.href =     
+      `reg.html?token=${token}&usercode=${code}&tab=home`;    
+  } else {    
+    alert("Credenziali errate!");    
+  }    
+}    
+</script>    
+    
+</body>    
+</html>
