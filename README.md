@@ -55,9 +55,9 @@ Ogni docente ha le proprie credenziali salvate in `users.json` e può accedere a
 
 ## 📦 Download
 
-> [!NOTE]
-> Le versioni scaricabili `.zip` saranno disponibili a breve.
-
+| Versione | Links |
+|----------|-------|
+| 1.x | [1.0](https://github.com/DeMENIGECO/ToSecureInLogin/releases/download/1.0/TSIL10.zip) |
 ---
 
 ## 💻 Codice sorgente
