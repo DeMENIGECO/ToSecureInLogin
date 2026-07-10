@@ -1,0 +1,159 @@
+<!DOCTYPE html>    
+<html lang="it">    
+<head>    
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+<title>Area Utente</title>    
+    
+<style>    
+body {    
+  margin: 0;    
+  font-family: Arial;    
+  background: #e8f5e9;    
+}    
+    
+header {    
+  background: #2e7d32;    
+  color: white;    
+  padding: 15px;    
+  text-align: center;    
+}    
+    
+nav {    
+  display: flex;    
+  justify-content: space-around;    
+  background: #66bb6a;    
+  padding: 10px;    
+}    
+    
+nav a {    
+  color: white;    
+  text-decoration: none;    
+  font-weight: bold;    
+}    
+    
+.container {    
+  padding: 20px;    
+}    
+    
+input, button {    
+  width: 100%;    
+  max-width: 300px;    
+  padding: 10px;    
+  margin-top: 10px;    
+  border-radius: 8px;    
+  border: 1px solid #ccc;    
+}    
+    
+button {    
+  background: #2e7d32;    
+  color: white;    
+  border: none;    
+}    
+</style>    
+</head>    
+    
+<body>    
+    
+<header>Area Utente</header>    
+    
+<nav>    
+  <a href="#" onclick="goTo('home')">Home</a>    
+  <a href="#" onclick="goTo('esempio')">Esempio</a>    
+  <a href="login.html">Esci</a>    
+</nav>    
+    
+<div class="container" id="content"></div>    
+    
+<script>    
+// 🔍 Legge query    
+function getQuery() {    
+  const params = new URLSearchParams(window.location.search);    
+  return {    
+    token: params.get("token"),    
+    usercode: params.get("usercode"),    
+    tab: params.get("tab") || "home"    
+  };    
+}    
+    
+// 🔐 Controllo token monouso    
+function checkToken(token) {    
+  if (!token) return false;    
+    
+  if (localStorage.getItem("used_" + token)) {    
+    return false;    
+  }    
+    
+  localStorage.setItem("used_" + token, "yes");    
+  return true;    
+}    
+    
+// 🎲 Genera nuovo token    
+function generateToken() {    
+  return Math.floor(Math.random() * 999999);    
+}    
+    
+// 🔗 Navigazione sicura    
+function goTo(tab) {    
+  const usercode = localStorage.getItem("usercode");    
+  const newToken = generateToken();    
+    
+  // ❌ NON segnare qui il token come usato    
+    
+  window.location.href =    
+    `reg.html?token=${newToken}&usercode=${usercode}&tab=${tab}`;    
+}    
+      
+// 🖥️ Render contenuto    
+function render(tab) {    
+  const content = document.getElementById("content");    
+    
+  if (tab === "home") {    
+    content.innerHTML = `    
+      <h2>Home</h2>    
+      <p>Benvenuto nell'area utente 👋</p>    
+    `;    
+  }    
+    
+  else if (tab === "esempio") {    
+    content.innerHTML = `    
+      <h2>Esempio</h2>    
+    
+      <input placeholder="Campo 1" id="num">    
+      <input placeholder="Campo 2" id="nome">    
+      <input placeholder="Scrivi qualcosa di utile..." id="arg">    
+    
+      <button onclick="esempio()">Fai far qualcosa!</button>    
+    
+      <p id="msg"></p>    
+    `;    
+  }    
+}    
+    
+// ✍️ Azione firma    
+function esempio() {    
+  document.getElementById("msg").innerText =    
+    "Modificami!";    
+}    
+    
+// 🚀 MAIN    
+const { token, usercode, tab } = getQuery();    
+    
+if (token) {    
+  if (!checkToken(token)) {    
+    alert("Token non valido!");    
+    window.location.href = "login.html";    
+  } else {    
+    localStorage.setItem("usercode", usercode);    
+  }    
+} else {    
+  if (!localStorage.getItem("usercode")) {    
+    window.location.href = "login.html";    
+  }    
+}    
+    
+render(tab);    
+</script>    
+    
+</body>    
+</html>
