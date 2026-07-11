@@ -1,0 +1,55 @@
+name: ✨ Richiesta funzionalità
+description: Proponi una nuova funzionalità o un miglioramento per TSIL
+title: "[FEATURE] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver proposto una nuova funzionalità per **ToSecureInLogin (TSIL)**!
+        Descrivi la tua idea nel modo più dettagliato possibile.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione della funzionalità
+      description: Spiega la funzionalità che vorresti aggiungere.
+      placeholder: Descrivi la tua idea...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Perché è utile?
+      description: Spiega perché questa funzionalità sarebbe utile per TSIL.
+      placeholder: Quale problema risolverebbe?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Possibile soluzione
+      description: Se hai un'idea su come implementarla, descrivila qui.
+      placeholder: Come potrebbe funzionare?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative considerate
+      description: Hai provato altri modi per ottenere lo stesso risultato?
+      placeholder: Descrivi eventuali alternative...
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione TSIL interessata
+      placeholder: "es. 1.1"
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni aggiuntive
+      description: Aggiungi screenshot, esempi o altri dettagli utili.
