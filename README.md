@@ -1,7 +1,10 @@
 # 🔐 ToSecureInLogin
 
-**Ultima versione:** `1.1`  
-**Sigla:** _TSIL_
+[![CI](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml/badge.svg)](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml)
+[![Sigla](https://img.shields.io/badge/Sigla-TSIL-14d928)](https://github.com/DeMENIGECO/ToSecureInLogin)
+[![Ultima versione](https://img.shields.io/github/v/release/DeMENIGECO/ToSecureInLogin?label=Ultima%20versione)](https://github.com/DeMENIGECO/ToSecureInLogin/releases)
+
+
 
 ---
 
