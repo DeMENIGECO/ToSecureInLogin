@@ -1,0 +1,77 @@
+name: 💥 Segnala un crash
+description: Segnala un blocco improvviso di TSIL
+title: "[CRASH] "
+labels:
+  - crash
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un crash di **ToSecureInLogin (TSIL)**.
+        Fornisci più dettagli possibili per aiutare a trovare la causa del problema.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del crash
+      description: Descrivi cosa è successo prima del blocco.
+      placeholder: Spiega il comportamento osservato...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passaggi per riprodurre
+      description: Inserisci i passaggi che causano il crash.
+      placeholder: |
+        1. Apri...
+        2. Esegui...
+        3. Il sistema si blocca...
+    validations:
+      required: true
+
+  - type: textarea
+    id: error
+    attributes:
+      label: Messaggio di errore o log
+      description: Inserisci eventuali errori mostrati dal browser o dalla console.
+      placeholder: Incolla qui il messaggio di errore...
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione TSIL
+      placeholder: "es. 1.1"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser utilizzato
+      placeholder: "es. Chrome 138"
+
+  - type: input
+    id: os
+    attributes:
+      label: Sistema operativo
+      placeholder: "es. Windows 11"
+
+  - type: textarea
+    id: files
+    attributes:
+      label: File coinvolti
+      description: Indica i file che causano il crash.
+      placeholder: |
+        Esempio:
+        - login.html
+        - reg.html
+        - users.json
+        - src/tsil
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni aggiuntive
+      description: Inserisci altri dettagli utili.
