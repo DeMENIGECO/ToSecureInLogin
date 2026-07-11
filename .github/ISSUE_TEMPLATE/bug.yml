@@ -1,0 +1,86 @@
+name: 🐛 Segnala un bug
+description: Segnala un problema o un comportamento non previsto di TSIL
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Grazie per aver segnalato un bug di **ToSecureInLogin (TSIL)**!
+        Compila tutte le informazioni richieste per aiutarci a risolvere il problema.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Descrizione del bug
+      description: Descrivi il problema riscontrato.
+      placeholder: Spiega cosa è successo...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Passaggi per riprodurre
+      description: Inserisci i passaggi necessari per vedere il problema.
+      placeholder: |
+        1. Apri...
+        2. Modifica...
+        3. Esegui...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento atteso
+      description: Cosa dovrebbe succedere normalmente?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamento attuale
+      description: Cosa succede invece?
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Versione TSIL
+      placeholder: "es. 1.1"
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: "es. Chrome 138"
+
+  - type: input
+    id: os
+    attributes:
+      label: Sistema operativo
+      placeholder: "es. Windows 11"
+
+  - type: textarea
+    id: files
+    attributes:
+      label: File interessati
+      description: Indica quali file causano il problema.
+      placeholder: |
+        Esempio:
+        - login.html
+        - reg.html
+        - users.json
+        - src/tsil
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informazioni aggiuntive
+      description: Aggiungi eventuali dettagli utili.
