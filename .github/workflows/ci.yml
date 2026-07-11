@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Avvia server
+        working-directory: src/tsil
+        run: |
+          python3 -m http.server 5500 &
+          SERVER_PID=$!
+
+          echo "Server avviato su http://localhost:5500/login.html"
+          sleep 5
+
+          kill $SERVER_PID
+          echo "Server fermato."
