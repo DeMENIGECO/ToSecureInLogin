@@ -3,3 +3,6 @@ contact_links:
   - name: Documentazione
     url: https://github.com/DeMENIGECO/ToSecureInLogin/tree/main/docs
     about: Prima leggi attentamente la documentazione e dopo crea un'issue.
+  - name: Report di Sicurezza TSIL
+    url: https://forms.gle/4TbZCQuqANwLooHd7
+    about: Compila questo modulo e non aprire un'issue se trovi problemi di sicurezza.
