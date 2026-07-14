@@ -85,6 +85,6 @@ La documentazione completa è disponibile nella cartella `docs`.
 
 ## 💻 Codice sorgente
 
-Il codice sorgente di TSIL è disponibile nella cartella `src/tsil`.
+Il codice sorgente di TSIL è disponibile nella cartella [`src/tsil`](src/tsil).
 
 Gli strumenti aggiuntivi, come **`aarg`**, sono disponibili nella cartella `src`.
