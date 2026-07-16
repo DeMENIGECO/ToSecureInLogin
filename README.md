@@ -1,4 +1,4 @@
-<div align="center"><img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/b8229ad5-078e-4f03-85f5-52f13a0bd128" />
+<div align="center"><img width="300" height="300" alt="Logo" src="https://github.com/user-attachments/assets/b8229ad5-078e-4f03-85f5-52f13a0bd128" />
   
   # ToSecureInLogin
   
