@@ -1,8 +1,12 @@
-# 🔐 ToSecureInLogin
-
-[![CI](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml/badge.svg)](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml)
+<div align="center"><img width="500" height="500" alt="Logo" src="https://github.com/user-attachments/assets/b8229ad5-078e-4f03-85f5-52f13a0bd128" />
+  
+  # ToSecureInLogin
+  
+  [![CI](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml/badge.svg)](https://github.com/DeMENIGECO/ToSecureInLogin/actions/workflows/ci.yml)
 [![Sigla](https://img.shields.io/badge/Sigla-TSIL-14d928)](https://github.com/DeMENIGECO/ToSecureInLogin)
 [![Ultima versione](https://img.shields.io/github/v/release/DeMENIGECO/ToSecureInLogin?label=Ultima%20versione)](https://github.com/DeMENIGECO/ToSecureInLogin/releases)
+
+</div>
 
 
 
